@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Hello World - 前端魔法师</title>
+  <title>前端魔法师</title>
   
 
   
@@ -390,72 +390,35 @@
     
     
     
-      <h1 class="title">
-        Hello World
-      </h1>
-      <div class='new-meta-box'>
-        
-          
-            
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="">
-    <p>请设置文章作者</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Dec 13, 2020</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class="new-meta-item browse leancloud">
-    <a class='notlink'>
-      
-      <div id="lc-pv" data-title="Hello World" data-path="/2020/12/13/hello-world/">
-        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
-        次浏览
-      </div>
-    </a>
-  </div>
-
-
-          
-        
-      </div>
-    
   </div>
 
 
   
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+  <h1 id="npm基本命令"><a href="#npm基本命令" class="headerlink" title="npm基本命令"></a>npm基本命令</h1><ul>
+<li><p><code>npm -v</code>：查看 npm 版本。</p>
+</li>
+<li><p><code>npm list</code>：查看当前目录下都安装了哪些 npm 包。</p>
+</li>
+<li><p><code>npm info 模块</code>：查看该模块的版本及内容。</p>
+</li>
+<li><p><code>npm i 模块@版本号</code>：安装该模块的指定版本</p>
+</li>
+<li><p>``i/install：安装。使用 install 或者它的简写 i，都表明你想要下载这个包。`</p>
+</li>
+<li><p><code>uninstall：卸载。如果你发现这个模块你已经不使用了，那么可以通过 uninstall 卸载它。</code></p>
+</li>
+<li><p><code>g：全局安装。表明这个包将安装到你的计算机中，你可以在计算机任何一个位置使用它。</code></p>
+</li>
+<li><p><code>--save/-S：通过该种方式安装的包的名称及版本号会出现在 package.json 中的 dependencies 中。dependencies 是需要发布在生成环境的。例如：ElementUI 是部署后还需要的，所以通过 -S 形式来安装。</code></p>
+</li>
+<li><p><code>--save-dev/-D：通过该种方式安装的包的名称及版本号会出现在 package.json 中的 devDependencies 中。devDependencies 只在开发环境使用。例如：gulp 只是用来压缩代码、打包的工具，程序运行时并不需要，所以通过 -D 形式来安装。</code></p>
+</li>
+</ul>
+<p>如果我们需要创建 <code>package.json</code>，那么我们只需要在指定的包管理目录（例如 <code>node_modules</code>）中通过以下命名进行生成：</p>
+<ul>
+<li><code>npm init</code>：按步骤创建 <code>package.json</code>。</li>
+<li><code>npm init --yes</code>：快速创建 <code>package.json</code> </li>
+</ul>
 
   
   
@@ -473,7 +436,7 @@
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2020/12/13/hello-world/>http://example.com/2020/12/13/hello-world/</a></p>
+                <p>本文永久链接是：<a href=http://example.com/2020/11/20/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/>http://example.com/2020/11/20/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</a></p>
               
             
           </blockquote>
@@ -490,10 +453,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-13T00:12:06+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-20T00:29:06+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Dec 13, 2020</p>
+    <p>更新于：Nov 20, 2020</p>
   </a>
 </div>
 
@@ -512,7 +475,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2020/12/13/hello-world/&title=Hello World - 前端魔法师&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2020/11/20/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/&title= - 前端魔法师&summary="
           
           >
           
@@ -524,7 +487,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2020/12/13/hello-world/&title=Hello World - 前端魔法师&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2020/11/20/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/&title= - 前端魔法师&summary="
           
           >
           
@@ -536,7 +499,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2020/12/13/hello-world/&title=Hello World - 前端魔法师&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2020/11/20/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/&title= - 前端魔法师&summary="
           
           >
           
@@ -566,18 +529,11 @@
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/2020/11/20/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/'>
-          <p class='title'><i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>npm基本命令
-npm -v：查看 npm 版本。
-
-npm list：查看当前目录下都安装了哪些 npm 包。
-
-npm info 模块：查看该模块的版本及内容。
-
-npm i 模块@版本号：...</p>
+        <a class='prev' href='/2020/12/13/hello-world/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Hello World</p>
+          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
         </a>
+      
       
     </div>
   
@@ -619,7 +575,7 @@ npm i 模块@版本号：...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        
     </div>
   </section>
 
@@ -638,8 +594,8 @@ npm i 模块@版本号：...</p>
 
 <script>
   window.pdata={}
-  pdata.ispage=true;
-  pdata.postTitle="Hello World";
+  pdata.ispage=false;
+  pdata.postTitle="";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
